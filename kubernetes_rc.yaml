@@ -16,4 +16,4 @@ spec:
       containers:
       - name: web-app
         image: nginx
-replicas: 3    
+  replicas: 3    
