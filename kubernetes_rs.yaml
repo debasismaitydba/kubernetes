@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: web-rs
+  labels:
+    app: web-app-rs
+    type: webapp
+spec:
+  template:
+    metadata:
+      name: web-pod
+      labels:
+        app: web-app-rs
+        type: webapp
+    spec:
+      containers:
+      - name: web-app
+        image: nginx
+  replicas: 6
+  selector:
+    matchLebels:
+      type: webapp
+    
