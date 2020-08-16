@@ -18,6 +18,6 @@ spec:
         image: nginx
   replicas: 6
   selector:
-    matchLebels:
+    matchLabels:
       type: webapp
     
